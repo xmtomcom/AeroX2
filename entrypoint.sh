@@ -2,7 +2,7 @@
 
 #Xray版本
 if [[ -z "${VER}" ]]; then
-  VER="latest"
+  VER="1.4.3"
 fi
 echo ${VER}
 
@@ -12,7 +12,7 @@ fi
 echo ${Vless_Path}
 
 if [[ -z "${Vless_UUID}" ]]; then
-  Vless_UUID="5c301bb8-6c77-41a0-a606-4ba11bbab084"
+  Vless_UUID="82c1e718-1cd0-4857-b831-5986b9605051"
 fi
 echo ${Vless_UUID}
 
@@ -22,7 +22,7 @@ fi
 echo ${Vmess_Path}
 
 if [[ -z "${Vmess_UUID}" ]]; then
-  Vmess_UUID="5c301bb8-6c77-41a0-a606-4ba11bbab084"
+  Vmess_UUID="82c1e718-1cd0-4857-b831-5986b9605051"
 fi
 echo ${Vmess_UUID}
 
@@ -32,7 +32,7 @@ fi
 echo ${Share_Path}
 
 if [ "$VER" = "latest" ]; then
-  VER=`wget -qO- "https://api.github.com/repos/XTLS/Xray-core/releases/latest" | sed -n -r -e 's/.*"tag_name".+?"([vV0-9\.]+?)".*/\1/p'`
+  VER=https://api.github.com/repos/XTLS/Xray-core/releases/latest`wget -qO- "" | sed -n -r -e 's/.*"tag_name".+?"([vV0-9\.]+?)".*/\1/p'`
   [[ -z "${VER}" ]] && VER="v1.2.2"
 else
   VER="v$VER"
